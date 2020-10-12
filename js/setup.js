@@ -10,13 +10,13 @@ var EYES_COLOR = ['rgb(0, 0, 0)', 'rgb(255, 0, 0)', 'rgb(0, 0, 255)', 'rgb(255, 
 /**
  * Поиск случайного значения
  * @param {*} wizardValue - наименование массива
- * return случайное значение
+ * @return случайное значение
  */
 var randomValue = function (wizardValue) {
   var min = 0;
   var max = wizardValue.length - 1;
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
 var userDialog = document.querySelector('.setup');
 userDialog.classList.remove('hidden');
@@ -52,9 +52,9 @@ var wizards = [
 /**
  * Копирование (размножение) блоков (волшебников) в разметке с заполнением данных
  * @param {*} wizard - информация о волшебнике
- * return блок волшебника с заполненными данными  
+ * @return блок волшебника с заполненными данными
  */
-var renderWizard = function(wizard) {
+var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
 
   wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
@@ -62,7 +62,7 @@ var renderWizard = function(wizard) {
   wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
 
   return wizardElement;
-}
+};
 
 var fragment = document.createDocumentFragment();
 for (var i = 0; i < wizards.length; i++) {
