@@ -193,7 +193,13 @@
   }
     
   var wizardSpeed = 3;
-    
+
+  /**
+   * Возвращает координату мага по горизонтале
+   * @param {number} gameFieldWidth - ширина игрового поля
+   * @return {number} - координату мага по горизонтале
+   */
+
   var getWizardX = function (gameFieldWidth) {
     return (gameFieldWidth - wizardWidth) / 2;
   }
